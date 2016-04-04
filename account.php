@@ -5,8 +5,11 @@ pageHeader("Create An Account");
 
 
 /* session[acccount] wil be true if the account was NOT created successfully (sry this is confusin) */
-if($_SESSION["account"] == true)
+if($_SESSION["fieldError"] == true)
     echo "<h3>Make Sure All Fields are filled!</h3>";
+if($_SESSION["passError"] == true)
+    echo "<h3>Password must contain at least 6 characters, and cannot be entirely alphabetic or entirely numeric</h3>";
+
 
 echo<<<_END
 
@@ -31,8 +34,7 @@ Password:
 
 _END;
 
-/* this is set to false so it assumes the account will be created smoothly */
-$_SESSION["account"] = false;
+
 ?>
 </body>
 </html>
