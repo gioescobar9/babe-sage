@@ -16,6 +16,9 @@ if($_SESSION["login"] == true)
 	echo"<a href = 'login.php'>Login</a>";
 if($_SESSION["login"] == false)
 	echo"<a href = 'logout.php'>Logout</a>";
+	
+if($_SESSION["admin"] == true)
+echo "<a href = 'admin.php'>Summary</a>";
 	echo "</h3>";
 }
 
