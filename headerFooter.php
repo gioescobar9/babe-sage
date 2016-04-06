@@ -1,3 +1,10 @@
+<!doctype html>
+<html>
+<head>
+<link rel="icon" type="jpg" href="images/carrot_icon.jpg" />
+<title>Babe+Sage</title>
+</head>
+<body>
 <?php
 include 'style.php'
 /* page header function to include on every page to display the same lay out of the page
