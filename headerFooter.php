@@ -22,7 +22,7 @@ echo<<<_END
   
   <h3>
   <a href = "index.php">Home</a>
-  <a href = "products.php">Products</a>
+  <a href = "produce.php">Weekly Share</a>
   <a href = "about.php">Who we are</a>
   
 _END;
