@@ -16,14 +16,14 @@ echo "<br>"
 //for loop used to display the available produce 
 for($i=0; $i<$rows; $i++)
 {
-  echo "<p>";
   $result->data_seek($i);
   $record=$result->fetch_array(MYSQLI_ASSOC);
   $productName = $record["name"];
   $descrip = $record["description"];
-  echo "<h3>".$productName."</h3>"
-  echo "<h4>".$descrip."</h4>"
-  echo "</p>"
+   echo "<h3>".$productName."</h3>"
+  echo "<p>";
+  echo $descrip;
+  echo "</p>";
 }
 echo "<br>"
 // new query to show yearly produce, also checking to make sure the query was successful
@@ -36,15 +36,17 @@ echo "<br>"
 //for loop to display all products names with heading 3 and all descriptions with heading 4
 for($i=0; $i<$newRows; $i++)
 {
-  echo "<p>";
   $resultNew->data_seek($i);
   $record=$resultNew->fetch_array(MYSQLI_ASSOC);
   $productName = $record["name"];
   $descrip = $record["description"];
   echo "<h3>".$productName."</h3>"
-  echo "<h4>".$descrip."</h4>"
-  echo "</p>"
+   echo "<p>";
+  echo $descrip;
+  echo "</p>";
 }
 //close connection
+// might have to make all the results the same variable
 closeConnection($result, $connection);
+closeConnection($resultNew,$connection);
 ?>
