@@ -16,7 +16,7 @@ includes a link to the login page, the products page, and the who we are page*/
 function pageHeader($pt)
 {
 echo<<<_END
-	<h1 id = "logo"><a href = "index.php" title = "Home"><img src = "images/carrot_icon.jpg" width = "150" height = "100" alt = "php image"/></a></h1>
+	<h1 id = "logo"><a href = "index.php" title = "Home"><img src = "images/logo.jpg" width = "150" height = "100" alt = "php image"/></a></h1>
 
  	<h2>$pt</h2>
   
