@@ -41,13 +41,12 @@ for($i=0; $i<$newRows; $i++)
   $productName = $record["name"];
   $descrip = $record["description"];
   $imageName = $record['imageName'];
-  echo "<h3>".$productName."</h3>"
+  echo "<h3><img src='imageName' width=150 heigth=100 >".$productName."</image></h3>"
    echo "<p>";
   echo $descrip;
   echo "</p>";
 }
-$colNames = array("name", "description", "imageName");
-generateTable($_SESSION['products'], $colNames);
+
 //close connection
 // might have to make all the results the same variable
 closeConnection($result, $connection);
