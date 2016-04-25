@@ -58,4 +58,16 @@ function generateTable($arr, $colNames)
 	}
 	echo "</table>";
 }
+
+function footer()
+{
+echo "<div style = 'text-align:center;'>";
+echo "<font size = '3'>";
+echo "<em>Got a comment, question or compliment?</em>";
+echo "<br>";
+echo "SEND US AN EMAIL: &nbsp;babeandsage@gmail.com";
+echo "</font>";
+echo "</div>";
+
+}
 ?>
