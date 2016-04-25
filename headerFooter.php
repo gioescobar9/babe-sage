@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<link rel="icon" type="jpg" href="images/carrot_icon.jpg" />
+<link rel="icon" type="jpg" href="images/logo.jpg" />
 <title>Babe+Sage</title>
 </head>
 <body>
