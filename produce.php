@@ -27,7 +27,7 @@ for($i=0; $i<$rows; $i++)
 }
 echo "<br>"
 // new query to show yearly produce, also checking to make sure the query was successful
-$queryNew="SELECT name, description FROM products"
+$queryNew="SELECT name, description, imageName FROM products"
 $resultNew = $connection->query($queryNew)
 if(!$result) die ("Query failed".$connection->connect_error);
 $newRows=$resultNew->num_rows;
@@ -40,11 +40,14 @@ for($i=0; $i<$newRows; $i++)
   $record=$resultNew->fetch_array(MYSQLI_ASSOC);
   $productName = $record["name"];
   $descrip = $record["description"];
+  $imageName = $record['imageName'];
   echo "<h3>".$productName."</h3>"
    echo "<p>";
   echo $descrip;
   echo "</p>";
 }
+$colNames = array("name", "description", "imageName");
+generateTable($_SESSION['products'], $colNames);
 //close connection
 // might have to make all the results the same variable
 closeConnection($result, $connection);
